@@ -1,5 +1,4 @@
 import * as angular from 'angular';
-import * as $ from 'jquery';
 import * as Immutable from 'immutable';
 
 var module = angular.module('app', []);
@@ -26,4 +25,6 @@ class PageComponentController {
 
 module.component('page', new PageComponent());
 
-$(() => angular.bootstrap(document.getElementsByTagName('body')[0], ['app']));
+document.addEventListener("DOMContentLoaded", () => {
+   angular.bootstrap(document.getElementsByTagName('body')[0], ['app']);
+});
