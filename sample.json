@@ -1,0 +1,130 @@
+{
+  grid: {
+    fieldsOnReport: [
+      {
+        id: "df_1",
+        type: "main",
+        position: {
+          row: 1,
+          x: 123
+        },
+        format: {
+          isBold: false,
+          isItalics: true,
+          isUnderline: false,
+          font: null,
+          size: null
+        }
+      },
+      {
+        id: "subformat_1_1",
+        type: "subformat",
+        position: {
+          row: 2,
+          x: 0
+        },
+        elementSize: {
+          rows: 1,
+          width: 30
+        },
+        repeats: 4,
+        sorts: [],
+        filters: [],
+        layout: [
+          {
+            id: "subformat_1_1",
+            type: "subformat_1",
+            position: {
+              row: 1,
+              x: 0
+            },
+            format: {
+              isBold: false,
+              isItalics: false,
+              isUnderline: false,
+              font: null,
+              size: null
+            }
+          },
+          {
+            id: "subformat_1_2",
+            type: "subformat_1",
+            position: {
+              row: 1,
+              x: 90
+            },
+            format: {
+              isBold: false,
+              isItalics: false,
+              isUnderline: true,
+              font: null,
+              size: null
+            }
+          }
+        ]
+      }
+    ]
+  },
+  sidebar: {
+    mode: "toolbox",
+    toolbox: {
+      parentType: "main",
+      availableFields: [
+        "df_1",
+        "df_2"
+      ]
+    }
+  },
+  allFields: {
+    main: [
+      {
+        id: "df_1",
+        name: "First Name",
+        sample: ["Andrew", "Bob", "Jeff", "Nancy", "Simone", "Lauren"],
+        size: [1, 3]
+      },
+      {
+        id: "df_2",
+        name: "Last Name",
+        sample: ["Varnerin", "..."],
+        size: [1, 4]
+      }
+    ],
+    subformat_1: [
+      {
+        id: "subformat_1_1",
+        name: "Contribution ID",
+        sample: [1, 3, 667, 9123, 3412],
+        size: [1, 2]
+      },
+      {
+        id: "subformat_1_2",
+        name: "Amount",
+        sample: ["$5", "$55", "$123", "$27", "$1", "$55.75"],
+        size: [1, 3]
+      }
+    ],
+    subformat_2: []
+  },
+  selectedItem: {
+    id: "df_1",
+    type: "main"
+  },
+  allSubformats: [
+    {
+      id: 1,
+      name: "contributions",
+      defaultSize: [1, 3],
+      sorts: [],
+      filters: []
+    },
+    {
+      id: 2,
+      name: "codes",
+      defaultSize: [1, 3],
+      sorts: [],
+      filters: []
+    }
+  ]
+  
+}
