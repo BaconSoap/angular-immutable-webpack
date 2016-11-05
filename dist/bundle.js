@@ -57,14 +57,19 @@
 	    return PageComponent;
 	}());
 	var PageComponentController = (function () {
-	    function PageComponentController() {
+	    function PageComponentController($timeout) {
+	        var _this = this;
 	        this.vm = {
 	            name: 'Andrew'
 	        };
 	        console.log('making controller');
 	        console.log(this);
 	        this.vm.list = Immutable.List([1, 2, 5, 7]);
+	        $timeout(function () {
+	            _this.vm.list = _this.vm.list.push(29, 444, 666);
+	        }, 3000);
 	    }
+	    PageComponentController.$inject = ['$timeout'];
 	    return PageComponentController;
 	}());
 	module.component('page', new PageComponent());
