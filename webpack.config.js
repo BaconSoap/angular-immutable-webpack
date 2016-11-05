@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = {
   entry: {
     app: "./src/index",
-    vendors: ['angular', 'jquery', 'immutable']
+    vendors: ['angular', 'immutable']
   },
   output: {
     path: "./dist",
