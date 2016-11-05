@@ -8,5 +8,20 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "awesome-typescript-loader": "^2.2.4",
+    "typescript": "^2.0.7",
+    "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "@types/angular": "1.5.8",
+    "@types/immutable": "^3.8.4",
+    "@types/jquery": "^2.0.33",
+    "angular": "1.5.8",
+    "global": "^4.3.1",
+    "immutable": "^3.8.1",
+    "jquery": "^3.1.1",
+    "webpack-dev-server": "^1.16.2"
+  }
 }
