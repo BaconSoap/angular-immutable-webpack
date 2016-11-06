@@ -1,5 +1,6 @@
 import * as Immutable from 'immutable';
 import { INgRedux } from 'ng-redux';
+import * as actions from './pageReducers';
 
 export default class PageComponent implements ng.IComponentOptions {
     public controller = PageComponentController;
@@ -10,9 +11,13 @@ class PageComponentController {
     public vm = {
         name: 'Andrew'
     }
+
+    increment: typeof actions.increment;
+    test: number;
+
     static $inject = ['$timeout', '$ngRedux', '$scope'];
     constructor($timeout: ng.ITimeoutService, $ngRedux: INgRedux, $scope: ng.IScope) {
-        let unsubscribe = $ngRedux.connect(this.mapStateToThis, {increment: () => {return {type: 'INCREMENT'}}})(this);
+        let unsubscribe = $ngRedux.connect(this.mapStateToThis, actions)(this);
 
         (this.vm as any).list = Immutable.List([1,2,5,7]);
         $timeout(() => {
@@ -22,15 +27,13 @@ class PageComponentController {
         $scope.$on('$destroy', unsubscribe);
 
         $timeout(() => {
-            (this as any).increment();
-            console.log(this);
+            this.increment();
         }, 1000);
-        console.log(this);
     }
 
-    private mapStateToThis(state: any) {
+    private mapStateToThis(state: {page: typeof actions.defaultState}) {
         return {
-            test: state.page
+            test: state.page.get('test')
         };
     }
 }

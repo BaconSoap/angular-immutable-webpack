@@ -18,9 +18,15 @@
   version "1.10.31"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-1.10.31.tgz#cebc68d369ded05344000a9b7bc62fcca7131de5"
 
-"@types/redux":
+"@types/redux", "@types/redux@*":
   version "3.6.31"
   resolved "https://registry.yarnpkg.com/@types/redux/-/redux-3.6.31.tgz#40eafa7575db36b912ce0059b85de98c205b0708"
+
+"@types/redux-logger":
+  version "2.6.32"
+  resolved "https://registry.yarnpkg.com/@types/redux-logger/-/redux-logger-2.6.32.tgz#017cac5dfeef9616f06e41114b7a03a9caa13141"
+  dependencies:
+    "@types/redux" "*"
 
 abbrev@1:
   version "1.0.9"
@@ -401,6 +407,10 @@ debug@^2.2.0, debug@~2.2.0:
 decamelize@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
+
+deep-diff@0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/deep-diff/-/deep-diff-0.3.4.tgz#aac5c39952236abe5f037a2349060ba01b00ae48"
 
 deep-extend@~0.4.0:
   version "0.4.1"
@@ -807,6 +817,10 @@ ieee754@^1.1.4:
 immutable:
   version "3.8.1"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.1.tgz#200807f11ab0f72710ea485542de088075f68cd2"
+
+immutable-devtools:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/immutable-devtools/-/immutable-devtools-0.0.7.tgz#da0fbdd860c3a8a598967fc544bb0329ec3ad26e"
 
 indexof@0.0.1:
   version "0.0.1"
@@ -1515,6 +1529,12 @@ redux, redux@^3.0.0:
     lodash-es "^4.2.1"
     loose-envify "^1.1.0"
     symbol-observable "^1.0.2"
+
+redux-logger:
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-2.7.4.tgz#891e5d29e7f111d08b5781a237b9965b5858c7f8"
+  dependencies:
+    deep-diff "0.3.4"
 
 regex-cache@^0.4.2:
   version "0.4.3"
