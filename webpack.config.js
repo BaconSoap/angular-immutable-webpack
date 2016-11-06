@@ -20,7 +20,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin('vendors'),
+    //new webpack.optimize.UglifyJsPlugin('vendors'),
     new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
   ]
 };
