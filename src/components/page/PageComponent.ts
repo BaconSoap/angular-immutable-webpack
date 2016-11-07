@@ -26,7 +26,7 @@ class PageComponentController {
 
         $scope.$on('$destroy', unsubscribe);
 
-        $timeout(() => {
+        $timeout(() => { 
             this.increment();
         }, 1000);
     }
