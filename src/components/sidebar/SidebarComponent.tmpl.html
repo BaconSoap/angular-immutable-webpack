@@ -1,5 +1,5 @@
 <div style="background-color: lightgrey;height:900px">
-    <span class="success label" style="display:block; border: 1px solid black;" ng-repeat="field in $ctrl.allFields track by field.id">{{field.name}}</span>
+    <span class="success label" style="display:block; border: 1px solid black;" ng-repeat="field in $ctrl.allFields track by field.id">{{::field.name}}</span>
     <input type="text" placeholder="Add text field" ng-model="newTextField">
     <button class="button secondary" ng-click="$ctrl.createAndAddTextField(newTextField); newTextField=''">Add</button>
 </div>
